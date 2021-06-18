@@ -1,0 +1,843 @@
+/* google-fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+:root {
+    --purple: #814096;
+    --pink: #F83292;
+    --gradient: linear-gradient(90deg, var(--purple), var(--pink));
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    margin: 0; 
+    padding: 0;
+    box-sizing: inherit;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 18px 0;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+    z-index: 100;
+}
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo h2 {
+    color: var(--purple);
+    font-weight: normal;
+}
+.header__logo span {
+    color: var(--pink);
+}
+.header__navbar ul {
+    display: flex;
+}
+.header__navbar ul li a {
+    color: var(--purple);
+    font-size: 18px;
+    margin-left: 2rem;
+    transition: 0.3s linear;
+}
+.header__navbar ul li a:hover {
+    color: var(--pink);
+}
+.header__navbar ul li:nth-child(1) a {
+    margin: 0;
+}
+
+/* main-qismi */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/home-bg-img.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 70px;
+    width: 100%;
+    height: auto;
+}
+main .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+main  h3 {
+    color: black;
+}
+main  span, h3 {
+    color: var(--pink);
+    font-size: 45px;
+}
+main .content p {
+    font-size: 15px;
+    color: #666;
+    padding: 10px;
+}
+.btn {
+    display: inline-block;
+    padding: 8px 25px;
+    border-radius: 5rem;
+    background: var(--gradient);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+    transition: all .3s linear;
+}
+.btn:hover {
+    transform: scale(1.1);
+}
+main .content img {
+    width: 40vw;
+    animation: float 3s linear infinite;
+}
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-3.5rem);
+    }
+}
+/* app__features-qismi */
+.app__features {
+    margin-top: 50px;
+    background: #F9F9F9;
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+}
+.app__features .app__title__text {
+    text-align: center;
+    background: var(--gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 4rem 0;
+}
+.app__features .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.app__features .app__card  {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,.2);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+    margin: 0 10px;
+    padding: 3rem 1rem;
+    text-align: center;
+    transition: .2s linear;
+    width: 30%;
+}
+.app__features .app__card h4 {
+    padding: 10px 0 0 0;
+    color: #333;
+    font-size: 20px;
+}
+.app__features .app__card p {
+    color: #666;
+    font-size: 14px;
+    padding: 20px 0;
+}
+
+/* about__app-qismi */
+.about__app {
+    background: url(../images/about-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 3rem;
+}
+.about__app .title__text {
+    text-align: center;
+    background: var(--pink);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 25px;
+    text-transform: uppercase;
+
+}
+.about__app .container .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about__app .container img {
+    width: 600px;
+}
+.about__text {
+    padding: 0 30px;
+}
+.about__app h4 {
+    color: #666;
+    /* font-size: 25px; */
+}
+.about__app p {
+    padding: 8px 0 10px 0;
+    color: #666;
+    font-size: 14px;
+
+}
+.about__app .btn:last-child {   
+    margin-left: 20px;
+}
+
+/* subscribe-qismi */
+.subscribe {
+    text-align: center;
+    padding: 5rem 0;
+    background: url(../images/subscribe-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 30px 0 0 0;
+    color: #fff;
+}
+.subscribe h4 {
+    font-size: 35px;
+}
+.subscribe p {
+    padding: 10px 0;
+    font-size: 17px;
+}
+.subscribe .send {
+    display: flex;
+    justify-content: space-between;
+    max-width: 50rem;
+    border: 2px solid #fff;
+    padding: 10px 10px;
+    border-radius: 5rem;
+    margin: 1rem auto;
+    height: 4rem;
+}
+.subscribe .send input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.subscribe .send input input[placeholder="Enter Your Email"] {
+    background: none;
+    color: #fff;
+    padding-left: 30px;
+}
+.subscribe button {
+    color: black;
+    background: #fff;
+    padding: 10px 50px;
+    font-size: 17px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+}
+
+/* review-qismi */
+section {
+    width: 100%;
+    background: #F9F9F9;
+}
+.review .title__text {
+    text-align: center;
+    background: var(--gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 25px;
+    padding: 60px 0 30px 0;
+}
+.review .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.review__card {
+    background: #fff;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    border: .1rem solid rgba(0,0,0,.2);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+    /* flex: 1 1 30rem; */
+    border-radius: .5rem;
+    width: 30%;
+
+}
+.review__card #tutuq {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 4.4rem;
+    color: var(--pink);
+    opacity: .3;
+    /* position: absolute;
+    top: 0rem;
+    right: 0rem;
+    font-size: 5rem;
+    color: var(--pink);
+    opacity: .3; */
+}
+.review__card .user{
+    padding: 20px 0;
+}
+.review__card .user img {
+    border-radius: 50%;
+    height: 5.5rem;
+    width: 5.5rem;
+}   
+.review__card .user h4 {
+    color: var(--pink);
+}
+.review__card .user i {
+    color: var(--purple);
+    padding: 10px 0;
+}
+.review__card .user p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* plans-qismi */
+.plans .title__text {
+    text-align: center;
+    background: var(--gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 27px;
+    text-transform: uppercase;
+    padding: 100px 0;
+}
+.plans .row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+.plans .plans__card {
+    /* flex: 1 1 27rem; */
+    justify-content: space-between;
+    padding: 1rem;
+    background: #fff;
+    border: 2px solid rgba(0,0,0,.2);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+    border-radius: .5rem;
+    text-align: center;
+    width: 400px;
+}
+.plans .plans__card span {
+    font-weight: 100;
+    font-size: 20px;
+}
+.plans .plans__card h2 {
+    font-size: 35px;
+    font-weight: normal;
+}
+.plans .plans__card h5 {
+    padding: 15px 0;
+    color: var(--purple);
+    font-size: 30px;
+}
+.plans #border {
+    border-color: var(--pink);
+}
+.plans .plans__card h2 {
+    color: var(--pink);
+}
+.plans .plans__card ul {
+    padding: 15px 0;
+}
+.plans .plans__card ul li {
+    color: #666;
+    padding: 10px 0;
+    font-size: 17px;
+}
+.plans .plans__card i {
+    color: lightgreen;
+}
+.plans .plans__card #eror {
+    color: tomato;
+}
+.plans .plans__card .btn {
+    margin-top: 10px;
+}
+.plans .plans__card:hover {
+    border-color: var(--pink);
+}
+
+/* contact  -us-qismi */
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+.contact .contact__img {
+    width: 40%;
+}
+.contact img {
+    width: 100%;
+}
+.contact .contact__forma .card {
+    flex: 1 1 40rem;
+    padding: 2rem 2rem;
+    border: .1rem solid rgba(0,0,0,.2);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+    border-radius: .5rem;
+    background: #fff;
+    width: 600px;
+}
+.contact h4 {
+    text-align: center;
+    background: var(--gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 27px;
+    text-align: left;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+.contact input, textarea {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    border-top: none;
+    outline: none;
+    padding: 30px 0 10px 0;
+    border-left: none; border-right: none;
+}
+.contact textarea {
+    resize: none;
+    width: 100%;
+    height: 140px;
+    margin-bottom: 20px;
+}
+
+/* footer-qismi */
+footer {
+    padding-top: 3rem;
+    background: url(../images/footer-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* height: 61vh; */
+}
+footer p {
+    font-size: 1rem;
+    padding: .5rem 0;
+    color: #eee;
+}
+.big__row {
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:1.5rem;
+}
+footer ul li a {
+    color: #eee;
+    display: inline-block;
+    margin: 10px 0;
+    font-family: 'Nunito', sans-serif;
+}
+footer ul li a:hover {
+    text-decoration: underline;
+    color: gold;
+}
+.developer {
+    text-align: center;
+    color: #eee;
+    border-top: .1rem solid rgba(255,255,255,.2);
+    padding: 20px 0;
+}
+footer h1 {
+    font-size: 25px;
+    padding: 1rem 0;
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 1rem; 
+}
+footer .box {
+    display: flex;
+    align-items: center;
+}
+footer .box i {
+    margin: .5rem 0;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--pink);
+    font-size: 1rem;
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    text-align: center;
+}
+footer .developre {
+    text-align: center;
+    color: #eee;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+    padding: 20px 0;
+    margin-top: 30px;
+    font-weight: 100;
+}
+footer .developre a {
+    color: yellow;
+}
+
+
+
+
+
+
+
+/* media-qismi */
+#check{
+    display: none;
+}
+.dropdovn{
+    display: none;
+}
+/* 1350px */
+@media (max-width: 1360px) {
+    .plans__card {
+        width: 350px !important;
+    }
+}
+/* 1330px */
+@media (max-width: 1330px) {
+    .about__app .container img {
+        width: 550px;
+    }
+}
+/* 1250px */
+@media (max-width: 1250px) {
+    .about__app .container img {
+        width: 500px;
+    }
+    .about__text {
+        padding: 0;
+    }
+    .contact .contact__forma .card{
+        width: 550px;
+    }
+}
+/* 1230px */
+@media (max-width: 1230px) {
+    .app__features .app__card {
+        padding: 2rem 1rem;
+    }
+}
+/* 1190px */
+@media (max-width: 1190px) {
+    .plans__card {
+        width: 300px !important;
+    }
+}
+/* 1131px */
+@media (max-width: 1130px) {
+    .app__features .row {
+        flex-wrap: wrap;
+    }
+    .app__features .app__card {
+        margin-top: 30px;
+    }
+    .app__features .app__title__text {
+        padding: 60px 0 20px 0px;
+    }
+
+}
+/* 1040px */
+@media(max-width: 1090px) {
+    .app__features .app__card {
+        width: 370px;
+        /* justify-content: center; */
+    }
+    .app__features .app__card:last-child {
+        width: 100%;
+    }
+}
+/* 1060px */
+@media(max-width: 1060px) {
+    main .content p {
+        font-size: 13px;
+    }
+    main .content h3 {
+        font-size: 40px;
+    }
+    .contact .contact__forma .card {
+        width: 500px;
+    }
+    .contact .contact__img {
+        width: 45%;
+        margin-right: 20px;
+    }
+}
+/* 130px */
+@media (max-width: 1030px) {
+    .about__app .container img {
+        width: 450px;
+    }
+    
+    .review__card {
+        padding: 20px 15px 0 15px;
+    }
+    .review__card .user  p {
+        font-size: 12px;
+    }
+    .review__card #tutuq {
+        right: 10px;
+    }
+}
+/* 1015px */
+@media (max-width: 1015px) {
+    .plans__card {
+        width: 250px !important;
+    }
+}
+/* 980px */
+@media (max-width: 980px) {
+    .app__features .app__card {
+        width: 340px;
+    }
+    .app__features .app__card h4 {
+        font-size: 20px;
+    }
+    .app__features .app__card p {
+        font-size: 15px;
+    }
+    .review .row {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .review .review__card:last-child {
+        width: 100%;
+    }
+    .review .review__card {
+        width: 45%;
+    }
+}
+/* 950px */
+@media (max-width: 950px) {
+    .contact .card {
+        width: 450px !important;
+    }
+}
+/* 920px */
+@media (max-width: 920px) {
+    .app__features .app__card {
+        width: 330px;
+    }
+    .app__features .app__card h4 {
+        font-size: 18px;
+    }
+    .app__features .app__card p {
+        font-size: 13px;
+    }
+    .about__app .container .row {
+        flex-wrap: wrap;
+    }
+    .about__app .container img {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .about__app {
+        background-image: none;
+    }
+}
+/* 900px  */
+@media(max-width: 900px) {
+    .app__features .app__card {
+        width: 300px;
+    }
+    .plans .row {
+        flex-wrap: wrap;
+    }
+    .contact .row {
+        flex-direction: column;
+    }
+    .contact .contact__img {
+        width: 100%;
+    }
+    .contact .contact__forma {
+        width: 100% !important;
+        margin-top: 50px;
+    }
+    .contact__forma .card {
+        width: 100% !important; 
+    }
+}
+@media(max-width: 750px){
+    .checkbtn{
+        display: block;
+    }
+    header ul{
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 73px;
+        left: -100%;
+        text-align: center;
+        transition: .5s;
+        flex-direction: column;
+        z-index: 3000;
+    }
+    nav i {
+        color: var(--purple);
+        font-size: 25px;
+    }
+    nav ul li{
+        display: block;
+        margin: 20px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    .header__navbar ul li a {
+        margin: 0;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+        color: red;
+    }
+    .dropdovn{
+        display: block;
+    }
+}
+/* 830px */
+@media (max-width: 830px) {
+    .plans__card:last-child {
+        width: 100% !important; 
+        margin-top: 30px;
+    }
+    .plans__card {
+        width: 45% !important;
+    }
+}
+/* 800px */
+@media (max-width: 800px) {
+    .app__features .app__card {
+        width: 100%;
+    }
+}
+/* 770px */
+@media (max-width: 770px){
+    main .content img {
+        width: 100%;
+        /* animation: none; */
+    }
+    main .content{
+        flex-wrap: wrap;
+    }
+    .main__text {
+        order: 1;
+        text-align: center;
+    }
+    .about__text {
+        text-align: center;
+    }
+}
+/* 700px */
+@media (max-width: 700px) {
+    .review__card {
+        width: 100% !important;
+    }
+}
+/* 530px */
+@media (max-width: 530px) {
+    .plans .row {
+        flex-direction: column;
+    }
+    .plans__card {
+        width: 100% !important;
+        margin-top: 30px;
+    }
+    .plans .title__text {
+        margin-bottom: 0;
+    }
+    .plans__card:nth-child(1) {
+        /* background: #000; */
+        margin: 0;
+    }
+}
+/* 375px */
+@media (max-width: 377px) {
+    .about__text .btn {
+        margin-top: 20px;
+    }
+    .about__app .btn:last-child {
+        margin-left: 0;
+    }
+    .subscribe .send {
+        display: none;
+    }
+    .review__card .user p {
+        font-size: 12px;
+    }
+    .review__card .user img {
+        height: 4rem;
+        width: 4rem;
+    }
+}
+/* 360px */
+@media (max-width: 360px) {
+    main span, h3 {
+        font-size: 35px !important;
+    }
+    .app__title__text h2 {
+        font-size: 40px;
+    }
+    .review__card #tutuq {
+        right: 10px;    
+    }
+    .review .title__text {
+        font-size: 23px;
+    }
+}
+/* 340px */
+@media (max-width: 340px) {
+    footer .big__row {
+        justify-content: center;
+        display: flex;
+
+    }
+    footer .block__one, .block__two, .block__three, .block__four {
+        width: 100%;
+        text-align: center;
+    }
+    .block__four {
+        display: inline-block;
+    }
+}
